@@ -8,22 +8,22 @@ export default function Home() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
+              <div className="w-8 h-8 bg-gradient-to-r from-black to-green-400 rounded-full flex items-center justify-center">
                 <span className="text-white font-bold text-sm">CDA</span>
               </div>
               <h1 className="text-xl font-bold text-white">Casino Directory Assurance</h1>
             </div>
             <nav className="hidden md:flex space-x-6">
-              <a href="#casinos" className="text-white hover:text-purple-300 transition-colors">
+              <a href="#casinos" className="text-white hover:text-green-400 transition-colors">
                 Top Casinos
               </a>
-              <a href="#reviews" className="text-white hover:text-purple-300 transition-colors">
+              <a href="#reviews" className="text-white hover:text-green-400 transition-colors">
                 Reviews
               </a>
-              <a href="#bonuses" className="text-white hover:text-purple-300 transition-colors">
+              <a href="#bonuses" className="text-white hover:text-green-400 transition-colors">
                 Bonuses
               </a>
-              <a href="#responsible" className="text-white hover:text-purple-300 transition-colors">
+              <a href="#responsible" className="text-white hover:text-green-400 transition-colors">
                 Responsible Gaming
               </a>
             </nav>
@@ -34,11 +34,8 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative py-20 px-4">
         <div className="container mx-auto text-center">
-          <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Find{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
-              Safe & Trusted
-            </span>
+          <h2 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-black to-green-400">
+            Safe & Trusted
             <br />
             Online Casinos
           </h2>
@@ -46,7 +43,7 @@ export default function Home() {
             We review and rank only licensed, secure online casinos. Play responsibly with our verified recommendations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all">
+            <button className="bg-gradient-to-r from-black to-green-400 text-white px-8 py-3 rounded-lg font-semibold hover:from-gray-900 hover:to-green-500 transition-all">
               View Top Casinos
             </button>
             <button className="border border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all">
@@ -61,19 +58,19 @@ export default function Home() {
         <div className="container mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div className="text-white">
-              <div className="text-3xl font-bold text-purple-400">500+</div>
+              <div className="text-3xl font-bold text-green-400">500+</div>
               <div className="text-sm text-gray-300">Casinos Reviewed</div>
             </div>
             <div className="text-white">
-              <div className="text-3xl font-bold text-purple-400">100%</div>
+              <div className="text-3xl font-bold text-green-400">100%</div>
               <div className="text-sm text-gray-300">Licensed Operators</div>
             </div>
             <div className="text-white">
-              <div className="text-3xl font-bold text-purple-400">24/7</div>
+              <div className="text-3xl font-bold text-green-400">24/7</div>
               <div className="text-sm text-gray-300">Support Available</div>
             </div>
             <div className="text-white">
-              <div className="text-3xl font-bold text-purple-400">SSL</div>
+              <div className="text-3xl font-bold text-green-400">SSL</div>
               <div className="text-sm text-gray-300">Secure Encryption</div>
             </div>
           </div>
@@ -83,7 +80,9 @@ export default function Home() {
       {/* Top Casinos Section */}
       <section id="casinos" className="py-16 px-4">
         <div className="container mx-auto">
-          <h3 className="text-3xl font-bold text-white text-center mb-12">Top Rated Casinos</h3>
+          <h3 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-black to-green-400 text-center mb-12">
+            Top Rated Casinos
+          </h3>
           <div className="grid md:grid-cols-3 gap-6">
             {[1, 2, 3].map((index) => (
               <div
@@ -92,7 +91,7 @@ export default function Home() {
               >
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center space-x-3">
-                    <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
+                    <div className="w-12 h-12 bg-gradient-to-r from-black to-green-400 rounded-lg flex items-center justify-center">
                       <span className="text-white font-bold">#{index}</span>
                     </div>
                     <div>
@@ -104,7 +103,7 @@ export default function Home() {
                 <div className="space-y-2 mb-4">
                   <div className="flex justify-between text-sm">
                     <span className="text-gray-300">Welcome Bonus</span>
-                    <span className="text-purple-400 font-semibold">$1000 + 100 Spins</span>
+                    <span className="text-green-400 font-semibold">$1000 + 100 Spins</span>
                   </div>
                   <div className="flex justify-between text-sm">
                     <span className="text-gray-300">License</span>
@@ -115,7 +114,7 @@ export default function Home() {
                     <span className="text-white">2000+</span>
                   </div>
                 </div>
-                <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all">
+                <button className="w-full bg-gradient-to-r from-black to-green-400 text-white py-2 rounded-lg font-semibold hover:from-gray-900 hover:to-green-500 transition-all">
                   Play Now
                 </button>
                 <p className="text-xs text-gray-400 mt-2 text-center">18+ | Play Responsibly</p>
@@ -128,10 +127,12 @@ export default function Home() {
       {/* Features Section */}
       <section className="py-16 px-4 bg-white/5 backdrop-blur-sm">
         <div className="container mx-auto">
-          <h3 className="text-3xl font-bold text-white text-center mb-12">Why Choose Our Recommendations?</h3>
+          <h3 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-black to-green-400 text-center mb-12">
+            Why Choose Our Recommendations?
+          </h3>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-gradient-to-r from-black to-green-400 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path
                     strokeLinecap="round"
@@ -145,7 +146,7 @@ export default function Home() {
               <p className="text-gray-300">All casinos are verified for proper licensing and regulatory compliance.</p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-gradient-to-r from-black to-green-400 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path
                     strokeLinecap="round"
@@ -159,7 +160,7 @@ export default function Home() {
               <p className="text-gray-300">SSL encryption, secure payment methods, and data protection guaranteed.</p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-gradient-to-r from-black to-green-400 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path
                     strokeLinecap="round"
@@ -218,7 +219,9 @@ export default function Home() {
       {/* Newsletter Section */}
       <section className="py-16 px-4 bg-white/5 backdrop-blur-sm">
         <div className="container mx-auto text-center">
-          <h3 className="text-3xl font-bold text-white mb-4">Stay Updated</h3>
+          <h3 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-black to-green-400 mb-4 text-center">
+            Stay Updated
+          </h3>
           <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
             Get the latest casino reviews, bonus offers, and responsible gaming tips delivered to your inbox.
           </p>
@@ -228,7 +231,7 @@ export default function Home() {
               placeholder="Enter your email"
               className="flex-1 px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-purple-400"
             />
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all">
+            <button className="bg-gradient-to-r from-black to-green-400 text-white px-6 py-3 rounded-lg font-semibold hover:from-gray-900 hover:to-green-500 transition-all">
               Subscribe
             </button>
           </div>
@@ -241,7 +244,7 @@ export default function Home() {
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
+                <div className="w-8 h-8 bg-gradient-to-r from-black to-green-400 rounded-full flex items-center justify-center">
                   <span className="text-white font-bold text-sm">CDA</span>
                 </div>
                 <span className="text-white font-bold">Casino Directory Assurance</span>

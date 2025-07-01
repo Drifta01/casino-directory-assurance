@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Casino Directory Assurance - Trusted Online Casino Reviews",
+  title: "CDA",
   description:
     "Find safe, licensed online casinos with our comprehensive reviews. We promote responsible gaming and help you choose trustworthy platforms with the best bonuses and security.",
   keywords: "online casino, casino reviews, responsible gaming, safe gambling, casino bonuses, licensed casinos",
