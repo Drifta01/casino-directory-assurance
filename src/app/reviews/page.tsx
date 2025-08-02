@@ -85,7 +85,7 @@ export default function Reviews() {
         <div className="container mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Expert{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-black to-green-400">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-400">
               Casino Reviews
             </span>
           </h1>
@@ -289,7 +289,7 @@ export default function Reviews() {
       {/* Review Methodology */}
       <section className="py-16 px-4 bg-white/5 backdrop-blur-sm">
         <div className="container mx-auto">
-          <h3 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-black to-green-400 text-center mb-12">
+          <h3 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-400 text-center mb-12">
             Our Review Process
           </h3>
           <div className="grid md:grid-cols-3 gap-8">

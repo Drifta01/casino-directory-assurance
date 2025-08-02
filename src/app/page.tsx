@@ -34,7 +34,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative py-20 px-4">
         <div className="container mx-auto text-center">
-          <h2 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-black to-green-400">
+          <h2 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-400">
             Safe & Trusted
             <br />
             Online Casinos
@@ -80,7 +80,7 @@ export default function Home() {
       {/* Top Casinos Section */}
       <section id="casinos" className="py-16 px-4">
         <div className="container mx-auto">
-          <h3 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-black to-green-400 text-center mb-12">
+          <h3 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-400 text-center mb-12">
             Top Rated Casinos
           </h3>
           <div className="grid md:grid-cols-3 gap-6">
@@ -127,7 +127,7 @@ export default function Home() {
       {/* Features Section */}
       <section className="py-16 px-4 bg-white/5 backdrop-blur-sm">
         <div className="container mx-auto">
-          <h3 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-black to-green-400 text-center mb-12">
+          <h3 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-400 text-center mb-12">
             Why Choose Our Recommendations?
           </h3>
           <div className="grid md:grid-cols-3 gap-8">
@@ -219,7 +219,7 @@ export default function Home() {
       {/* Newsletter Section */}
       <section className="py-16 px-4 bg-white/5 backdrop-blur-sm">
         <div className="container mx-auto text-center">
-          <h3 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-black to-green-400 mb-4 text-center">
+          <h3 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-400 mb-4 text-center">
             Stay Updated
           </h3>
           <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
