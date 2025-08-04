@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Header } from "@/components/Header";
+import { Header } from "../components/Header";
+import { Footer } from "../components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,9 +16,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "CDA",
-  description:
-    "Find safe, licensed online casinos with our comprehensive reviews. We promote responsible gaming and help you choose trustworthy platforms with the best bonuses and security.",
-  keywords: "online casino, casino reviews, responsible gaming, safe gambling, casino bonuses, licensed casinos",
+  description: "Find the Best Online Casinos.",
+  keywords: "best online casino, casino reviews, responsible gaming, latest bonuses, licensed casinos",
 };
 
 export default function RootLayout({
@@ -30,6 +30,7 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

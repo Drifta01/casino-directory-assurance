@@ -150,66 +150,22 @@ export default function TopCasinos() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-slate-900">
       {/* Hero Section */}
       <section className="py-16 px-4">
         <div className="container mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Top Rated{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-400">
-              Online Casinos
-            </span>
+            Top Rated <span className="text-transparent bg-clip-text bg-green-400">Online Casinos</span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Our expert team has tested and ranked the best licensed online casinos. All sites featured are fully
             regulated, secure, and offer fair gaming.
           </p>
-
-          {/* Key Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-green-400">2025</div>
-              <div className="text-sm text-gray-300">Updated Rankings</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-green-400">100%</div>
-              <div className="text-sm text-gray-300">Licensed Sites</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-green-400">$50M+</div>
-              <div className="text-sm text-gray-300">Bonuses Available</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-green-400">24/7</div>
-              <div className="text-sm text-gray-300">Expert Support</div>
-            </div>
-          </div>
         </div>
       </section>
 
-      {/* Filter Bar */}
-      <section className="py-6 px-4 bg-white/5 backdrop-blur-sm">
-        <div className="container mx-auto">
-          <div className="flex flex-wrap gap-3 justify-center">
-            {filterOptions.map((option, index) => (
-              <button
-                key={index}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
-                  index === 0
-                    ? "bg-gradient-to-r from-black to-green-400 text-white"
-                    : "bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white"
-                }`}
-              >
-                {option}
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Casino Rankings */}
-      <section className="py-12 px-4">
-        <div className="container mx-auto">
+      <section className="py-8 px-4">
+        <div className="container w-fi mx-auto">
           <div className="space-y-6">
             {topCasinos.map((casino) => (
               <div
@@ -221,7 +177,7 @@ export default function TopCasinos() {
                   <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
                     <div className="flex items-center space-x-4">
                       {/* Rank Badge */}
-                      <div className="w-12 h-12 bg-gradient-to-r from-black to-green-400 rounded-xl flex items-center justify-center">
+                      <div className="w-12 h-12 bg-gradient-to-t from-black to-green-400 rounded-xl flex items-center justify-center">
                         <span className="text-white font-bold text-lg">#{casino.rank}</span>
                       </div>
 
@@ -353,7 +309,7 @@ export default function TopCasinos() {
 
                   {/* Action Buttons */}
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <button className="flex-1 bg-gradient-to-r from-black to-green-400 text-white py-4 px-6 rounded-xl font-bold text-lg hover:from-gray-900 hover:to-green-500 transition-all">
+                    <button className="flex-1 bg-gradient-to-t from-black to-green-400 text-white py-4 px-6 rounded-xl font-bold text-lg hover:from-gray-900 hover:to-green-500 transition-all">
                       PLAY NOW - Claim Bonus
                     </button>
                     <button className="border-2 border-green-400 text-green-400 py-4 px-6 rounded-xl font-semibold hover:bg-green-400 hover:text-black transition-all">
@@ -376,12 +332,12 @@ export default function TopCasinos() {
       {/* Why Trust Our Rankings */}
       <section className="py-16 px-4 bg-white/5 backdrop-blur-sm">
         <div className="container mx-auto">
-          <h3 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-400 text-center mb-12">
+          <h3 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-t from-green-400 to-green-400 text-center mb-12">
             Why Trust Our Casino Rankings?
           </h3>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-black to-green-400 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-gradient-to-t from-black to-green-400 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path
                     strokeLinecap="round"
@@ -397,7 +353,7 @@ export default function TopCasinos() {
               </p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-black to-green-400 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-gradient-to-t from-black to-green-400 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path
                     strokeLinecap="round"
@@ -413,7 +369,7 @@ export default function TopCasinos() {
               </p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-black to-green-400 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-gradient-to-t from-black to-green-400 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path
                     strokeLinecap="round"
@@ -431,110 +387,6 @@ export default function TopCasinos() {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-black/50 backdrop-blur-md py-12 px-4">
-        <div className="container mx-auto">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-gradient-to-r from-black to-green-400 rounded-full flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">CDA</span>
-                </div>
-                <span className="text-white font-bold">Casino Directory Assurance</span>
-              </div>
-              <p className="text-gray-400 text-sm">
-                Your trusted source for safe, licensed online casino rankings and responsible gaming information.
-              </p>
-            </div>
-            <div>
-              <h5 className="text-white font-semibold mb-3">Quick Links</h5>
-              <ul className="space-y-2 text-gray-400 text-sm">
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Top Casinos
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Casino Reviews
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Bonus Offers
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Game Guides
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h5 className="text-white font-semibold mb-3">Responsible Gaming</h5>
-              <ul className="space-y-2 text-gray-400 text-sm">
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Problem Gambling
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Self-Exclusion
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Deposit Limits
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Get Help
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h5 className="text-white font-semibold mb-3">Legal</h5>
-              <ul className="space-y-2 text-gray-400 text-sm">
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Privacy Policy
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Terms of Service
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Affiliate Disclosure
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Contact Us
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-white/20 mt-8 pt-8 text-center">
-            <p className="text-gray-400 text-sm">
-              © 2025 Casino Directory Assurance. All rights reserved. |
-              <span className="text-orange-400 font-semibold"> 18+ Only | Gamble Responsibly</span>
-            </p>
-            <p className="text-xs text-gray-500 mt-2">
-              This site contains affiliate links. We may receive compensation when you click on links to partner
-              casinos.
-            </p>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
