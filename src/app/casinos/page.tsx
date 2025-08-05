@@ -230,18 +230,6 @@ export default function TopCasinos() {
                       <div className="text-sm text-gray-400">Payout Speed</div>
                       <div className="text-white font-semibold">{casino.payoutSpeed}</div>
                     </div>
-                    <div className="bg-white/5 p-3 rounded-lg text-center">
-                      <div className="text-sm text-gray-400">Min Deposit</div>
-                      <div className="text-white font-semibold">{casino.minDeposit}</div>
-                    </div>
-                    <div className="bg-white/5 p-3 rounded-lg text-center">
-                      <div className="text-sm text-gray-400">Max Payout</div>
-                      <div className="text-white font-semibold">{casino.maxPayout}</div>
-                    </div>
-                    <div className="bg-white/5 p-3 rounded-lg text-center">
-                      <div className="text-sm text-gray-400">RTP</div>
-                      <div className="text-white font-semibold">{casino.rtp}</div>
-                    </div>
                   </div>
 
                   {/* Features and Games */}
@@ -265,33 +253,6 @@ export default function TopCasinos() {
                           </span>
                         ))}
                       </div>
-                    </div>
-                  </div>
-
-                  {/* Payment Methods */}
-                  <div className="mb-6">
-                    <h4 className="text-white font-semibold mb-3">Payment Methods</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {casino.paymentMethods.map((method, index) => (
-                        <span key={index} className="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">
-                          {method}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Pros */}
-                  <div className="mb-6">
-                    <h4 className="text-white font-semibold mb-3 flex items-center">
-                      <span className="text-green-400 mr-2">✓</span> Why We Recommend
-                    </h4>
-                    <div className="grid md:grid-cols-2 gap-2">
-                      {casino.pros.map((pro, index) => (
-                        <div key={index} className="flex items-center text-gray-300">
-                          <span className="text-green-400 mr-2">•</span>
-                          {pro}
-                        </div>
-                      ))}
                     </div>
                   </div>
 

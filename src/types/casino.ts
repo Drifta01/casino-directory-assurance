@@ -1,4 +1,4 @@
-export interface Casino {
+interface Casino {
   id: number;
   name: string;
   rating: number;
@@ -12,7 +12,13 @@ export interface Casino {
   isNew: boolean;
   isPopular: boolean;
   isExclusive: boolean;
-}
-export interface CasinoCardProps {
   casino: Casino;
 }
+interface CasinoCardProps {
+  casino: Casino;
+  featured?: boolean;
+  isExpanded?: boolean;
+
+}
+
+export type { Casino, CasinoCardProps };
