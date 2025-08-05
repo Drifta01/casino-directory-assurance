@@ -150,6 +150,7 @@ export default function TopCasinos() {
   ];
 
   return (
+    <>
     <div className="min-h-screen bg-slate-900">
       {/* Hero Section */}
       <section className="py-16 px-4">
@@ -349,5 +350,6 @@ export default function TopCasinos() {
         </div>
       </section>
     </div>
+    </>
   );
 }
