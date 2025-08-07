@@ -8,7 +8,8 @@ import Link from "next/link";
 export interface Casino {
   id: string;
   name: string;
-  nameImage: string;
+  nameImage?: string;
+  banner?: string;
 
   rating: number;
   trustScore: number;
@@ -38,7 +39,7 @@ interface CasinoCardProps {
 
 const CasinoCard: React.FC<CasinoCardProps> = ({ casino, featured = false }) => {
   const [isExpanded, setIsExpanded] = useState(false);
-  const [nameImageFailed, setNameImageFailed] = useState(false);
+  const [nameImageFailed, setNameImageFailed] = useState(true);
 
   const toggleExpanded = () => {
     setIsExpanded(!isExpanded);
@@ -69,79 +70,32 @@ const CasinoCard: React.FC<CasinoCardProps> = ({ casino, featured = false }) => 
 
   return (
     <div
-      className={`relative overflow-hidden rounded-2xl transition-all duration-300 ${
+      className={`relative overflow-hidden rounded-xl transition-all duration-300 ${
         featured
-          ? "bg-gradient-to-br from-black/80 via-gray-900/80 to-green-900/60 ring-2 ring-green-400/50 shadow-2xl shadow-green-400/20"
-          : "bg-gradient-to-br from-black/70 via-gray-900/70 to-green-900/40 hover:shadow-xl hover:shadow-green-400/10"
+          ? "bg-gradient-to-b from-black/80 via-gray-900/80 to-green-900/60 ring-2 ring-green-400/50 shadow-2xl shadow-green-400/20"
+          : "bg-gradient-to-b from-black/70 via-gray-900/70 to-green-900/40 hover:shadow-xl hover:shadow-green-400/10"
       } backdrop-blur-sm border border-green-400/20 hover:border-green-400/40 ${
         isExpanded ? "transform scale-[1.02]" : "hover:transform hover:scale-[1.01]"
       }`}
     >
-      {/* Featured Badge */}
-      {featured && (
-        <div className="absolute -top-2 -right-2 z-10">
-          <div className="bg-gradient-to-r from-yellow-400 to-yellow-600 text-black px-4 py-1 rounded-full text-sm font-bold transform rotate-12 shadow-lg">
-            ⭐ FEATURED
-          </div>
-        </div>
-      )}
-
-      {/* Main Card Content */}
-      <div className="p-6">
-        {/* Header Section */}
-        <div className="flex items-start justify-between mb-4">
+      <div className="p-0">
+        <img src="/CristalPoker-Logo-White.jpg" className="h-28 ml-25" />
+        <div className="flex items-start justify-between ">
           <div className="flex items-center space-x-4">
-            <div>
-              <div className="flex justify-center items-center h-24">
-                <Image
-                  src={casino.nameImage}
-                  alt="Casino Logo"
-                  width={400}
-                  height={70}
-                  className="flex object-center mx-auto"
-                />
-              </div>
-
-              <div className="flex items-center space-x-2 mt-2">
-                <div className="flex items-center">
-                  {renderStars(casino.rating)}
-                  <span className="text-white/80 ml-6 text-sm">({casino.rating}/5)</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Trust Score Badge */}
-          <div
-            className={`px-3 py-1 rounded-full text-white text-sm font-bold ${getTrustBadgeColor(casino.trustScore)}`}
-          >
-            Trust: {casino.trustScore}/10
+            <Image
+              src={casino.banner || "/INSTANT-CASHBACK-700x300.jpg"} // Provide a fallback value
+              alt={`${casino.name} Banner`}
+              width={700}
+              height={30}
+              className="mx-auto"
+            />
           </div>
         </div>
 
-        {/* Key Information Grid */}
-        <div className="grid grid-cols-2 gap-4 mb-4">
-          <div className="bg-black/30 rounded-lg p-3 border border-green-400/20">
-            <div className="text-green-400 text-sm font-medium mb-1">Welcome Bonus</div>
-            <div className="text-white font-bold">{casino.bonus}</div>
-            {casino.freeSpins && <div className="text-green-300 text-sm">+ {casino.freeSpins} Free Spins</div>}
-          </div>
+        <div className="grid grid-cols-2 gap-4 mb-4"></div>
 
-          <div className="bg-black/30 rounded-lg p-3 border border-green-400/20">
-            <div className="text-green-400 text-sm font-medium mb-1">Min Deposit</div>
-            <div className="text-white font-bold">{casino.minDeposit}</div>
-            <div className="text-gray-300 text-sm">Wagering: {casino.wagering}</div>
-          </div>
-        </div>
+        <div className="flex flex-wrap gap-2 mb-4"></div>
 
-        {/* Quick Stats */}
-        <div className="flex flex-wrap gap-2 mb-4">
-          <span className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm border border-blue-500/30">
-            🏆 {casino.licenseCountry} Licensed
-          </span>
-        </div>
-
-        {/* Action Buttons */}
         <div className="flex space-x-3 mb-4">
           <Link
             href={casino.affiliateLink}

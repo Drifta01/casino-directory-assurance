@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { Metadata } from "next";
 import Link from "next/link";
+
+import BonusCard from "../components/BonusCard";
 import CasinoCard, { Casino } from "../components/CasinoCard";
 
 // SEO Metadata
@@ -138,7 +140,8 @@ const casinoListStructuredData = {
 const casinoData: Casino = {
   id: "cristal-poker",
   name: "Cristal Poker",
-  nameImage: `${"/CristalPoker-Logo-White.jpg"}`,
+  nameImage: "CristalPoker-Logo-White.jpg",
+  banner: "/FIRST-DEPOSITt-700x300.jpg",
 
   rating: 4.5,
   trustScore: 9,
@@ -170,59 +173,60 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(casinoListStructuredData) }}
       />
-      <div className="min-h-screen bg-slate-900">
-        <Image
-          src="/slots-drifta-logo.png"
-          alt="Slots Drifta Logo"
-          width={200}
-          height={50}
-          className="border-solid border-2 border-slate-700 rounded-md float-left mt-8 ml-8"
-        />
-        <header className="relative py-20 px-4" role="banner">
-          <div className="container  text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-green-400 mb-4">
-              Best Online Casinos
-            </h1>
-          </div>
-        </header>
+      <section className=" bg-gray-900/50 backdrop-blur-sm">
+        <div className="container  text-center">
+          <h1 className="md:text-6xl font-bold text-green-600 object-center mb-4 text-center">Best Online Casinos</h1>
+        </div>
+      </section>
 
-        {/* Featured Casino Card Section */}
-        <section className="py-16 px-4">
-          <div className="container mx-auto">
-            <div className="max-w-4xl mx-auto">
-              <CasinoCard casino={casinoData} featured={true} />
-            </div>
-          </div>
-        </section>
+      <Image
+        src="/slots-drifta-logo.png"
+        alt="Slots Drifta Logo"
+        width={200}
+        height={50}
+        className="border-solid border-2 border-slate-700 rounded-md float-left mt-8 ml-8"
+      />
 
-        {/* CTA Section */}
-        <section className="py-16 px-4 bg-white/5 backdrop-blur-sm" aria-labelledby="cta-heading">
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/casinos">
-              <button className="bg-gradient-to-t from-black to-green-400 text-white px-32 py-3 rounded-lg font-semibold hover:from-gray-900 hover:to-green-500 transition-all">
-                View All Top Casinos
-              </button>
+      <section className="py-16 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center">
+            <Link href="/bonuses" className="text-green-400 hover:text-green-300 font-semibold underline">
+              View All Bonuses →
             </Link>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Trust Section */}
-        <section className="py-16 px-4 bg-white/5 backdrop-blur-sm" aria-labelledby="trust-heading">
-          <h2
-            id="trust-heading"
-            className="text-3xl font-bold text-transparent bg-clip-text bg-green-400 text-center mb-12"
-          >
+      <section className="py-16 px-4 bg-white/5 backdrop-blur-sm" aria-labelledby="cta-heading">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <Link href="/casinos">
+            <button className="bg-gradient-to-t from-black to-green-400 text-white px-32 py-3 rounded-lg font-semibold hover:from-gray-900 hover:to-green-500 transition-all shadow-lg hover:shadow-xl hover:scale-105">
+              🎯 View All Top Casinos
+            </button>
+          </Link>
+        </div>
+      </section>
+      <section className="py-16 px-4 max-w-xl">
+        <CasinoCard casino={casinoData} featured={true} />
+      </section>
+
+      <section className="py-16 px-4 bg-gradient-to-br from-slate-800/50 to-slate-700/50 backdrop-blur-sm">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-4xl font-bold text-transparent bg-clip-text bg-yellow-600 text-center">
             Why Choose Our Casino Recommendations?
           </h2>
+          <p className="text-gray-300 text-center mb-16 text-lg max-w-3xl mx-auto">
+            Because i <strong>Fucking</strong>Told You To
+          </p>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
+            <div className="text-center bg-white/5 rounded-2xl p-8 hover:bg-white/10 transition-all hover:scale-105">
               <div
-                className="w-16 h-16 bg-gradient-to-t from-black to-green-400 rounded-full flex items-center justify-center mx-auto mb-4"
+                className="w-20 h-20 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg"
                 role="img"
                 aria-label="Verified and licensed icon"
               >
                 <svg
-                  className="w-8 h-8 text-white"
+                  className="w-10 h-10 text-white"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -236,20 +240,20 @@ export default function Home() {
                   />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Verified & Licensed</h3>
-              <p className="text-gray-300">
-                All casinos are verified for proper licensing and regulatory compliance from reputable gaming
-                authorities.
+              <h3 className="text-2xl font-bold text-white mb-4">✅ Verified & Licensed</h3>
+              <p className="text-gray-300 leading-relaxed">
+                All casinos are <strong>thoroughly verified</strong> for proper licensing and regulatory compliance from
+                reputable gaming authorities including MGA, UKGC, and Curacao.
               </p>
             </div>
-            <div className="text-center">
+            <div className="text-center bg-white/5 rounded-2xl p-8 hover:bg-white/10 transition-all hover:scale-105">
               <div
-                className="w-16 h-16 bg-gradient-to-t from-black to-green-400 rounded-full flex items-center justify-center mx-auto mb-4"
+                className="w-20 h-20 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg"
                 role="img"
                 aria-label="Secure and safe icon"
               >
                 <svg
-                  className="w-8 h-8 text-white"
+                  className="w-10 h-10 text-white"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -263,19 +267,20 @@ export default function Home() {
                   />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Secure & Safe</h3>
-              <p className="text-gray-300">
-                SSL encryption, secure payment methods, and data protection guaranteed for safe online gambling.
+              <h3 className="text-2xl font-bold text-white mb-4">🔒 Secure & Safe</h3>
+              <p className="text-gray-300 leading-relaxed">
+                <strong>Bank-level SSL encryption</strong>, secure payment methods, and data protection guaranteed for
+                safe online gambling. Your personal information is always protected.
               </p>
             </div>
-            <div className="text-center">
+            <div className="text-center bg-white/5 rounded-2xl p-8 hover:bg-white/10 transition-all hover:scale-105">
               <div
-                className="w-16 h-16 bg-gradient-to-t from-black to-green-400 rounded-full flex items-center justify-center mx-auto mb-4"
+                className="w-20 h-20 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg"
                 role="img"
                 aria-label="Responsible gaming icon"
               >
                 <svg
-                  className="w-8 h-8 text-white"
+                  className="w-10 h-10 text-white"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -289,48 +294,51 @@ export default function Home() {
                   />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Responsible Gaming</h3>
-              <p className="text-gray-300">
-                Commitment to responsible gaming with resources and tools for safe gambling habits.
+              <h3 className="text-2xl font-bold text-white mb-4">❤️ Responsible Gaming</h3>
+              <p className="text-gray-300 leading-relaxed">
+                Commitment to <strong>responsible gaming</strong> with comprehensive resources and tools for safe
+                gambling habits. Player protection is our top priority.
               </p>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Newsletter Section */}
-        <section className="py-16 px-4 bg-white/5 backdrop-blur-sm" aria-labelledby="newsletter-heading">
-          <div className="container mx-auto text-center">
-            <h2 id="newsletter-heading" className="text-3xl font-bold text-transparent bg-clip-text bg-green-400 mb-4">
-              Stay Updated with Latest Casino Bonuses
-            </h2>
-            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Get the latest casino bonus offers, exclusive promotions, and new casino reviews delivered to your inbox.
+      <section className="py-16 px-4 ">
+        <div className="container mx-auto text-center">
+          <div className="max-w-3xl mx-auto">
+            <div className="mb-6">
+              <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-yellow-600">
+                Stay Updated with Latest Casino Bonuses
+              </h2>
+            </div>
+            <p className="text-gray-300 mb-8 text-lg">
+              Get <strong>exclusive bonus offers</strong>, casino reviews, and insider tips delivered straight to your
+              inbox.
+              <br />
+              Join <strong>50,000+</strong> smart players who never miss a deal!
             </p>
-            <form className="flex flex-col sm:flex-row max-w-md mx-auto gap-4" aria-label="Newsletter signup">
+            <form className="flex flex-col sm:flex-row max-w-lg mx-auto gap-4 mb-6" aria-label="Newsletter signup">
               <label htmlFor="email-input" className="sr-only">
                 Email address
               </label>
               <input
                 id="email-input"
                 type="email"
-                placeholder="Enter your email address"
-                className="flex-1 px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/50"
+                placeholder="🎰 Enter your email address"
+                className="flex-1 px-6 py-4 rounded-xl bg-gray-600"
                 required
                 aria-describedby="email-help"
               />
-              <button
-                type="submit"
-                className="bg-gradient-to-t from-black to-green-400 text-white px-6 py-3 rounded-lg font-semibold hover:from-gray-900 hover:to-green-500 transition-all"
-              >
-                Subscribe
-              </button>
             </form>
-            <p id="email-help" className="text-xs text-gray-400 mt-2">
-              We respect your privacy. Unsubscribe at any time.
-            </p>
+            <div className="flex justify-center items-center gap-6 text-sm text-gray-400">
+              <span className="flex items-center gap-1">✅ No spam, ever</span>
+              <span className="flex items-center gap-1">🔒 100% secure</span>
+              <span className="flex items-center gap-1">📱 Unsubscribe anytime</span>
+            </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </>
   );
 }
